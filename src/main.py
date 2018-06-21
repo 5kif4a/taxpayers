@@ -1,31 +1,61 @@
-import getpass
-import pandas as pd
-import sqlalchemy as sa
+import os
+import time
+import file_methods
+import db_methods
+import log
 
 
-def connect(user, password, db, host='localhost', port=5432):  # присоединиться к серверу
-    url = 'postgresql://{}:{}@{}:{}/{}'
-    url = url.format(user, password, host, port, db)
-
-    con = sa.create_engine(url, client_encoding='utf8')
-
-    meta = sa.MetaData(bind=con, reflect=True)
-
-    return con, meta
+def help():
+    print('''Список комманд:
+    download - скачать .xlsx файлы с сервера
+    convert - конвертировать .xlsx файлы в .csv
+    delete xlsx - удалить все файлы
+    exit - закрыть программу''')
 
 
-def insert_into_db():  # из .xlsx в базу данных
-    #pseudo_company_xl = pd.ExcelFile()
-    df = pd.read_excel('list_PSEUDO_COMPANY_KZ_ALL.xlsx', sheet_name='Лист1')
-    df.to_csv('list_PSEUDO_COMPANY_KZ_ALL.csv', encoding='utf8')
-    #print(df)
+def main_method():  # не самый лучший метод однако)
+    print('Updating started')
+    log.info('Updating started')
+    file_methods.delete_files('data/csv/')
+    file_methods.delete_files('data/xlsx/')
+    file_methods.delete_files('data/csv_edited/')
+    file_methods.download()
+    file_methods.xlsx_to_csv()
+    file_methods.prepare_csv()
+    db_methods.delete_tables('postgres', 'beat7boX', 'postgres')
+    db_methods.create('postgres', 'beat7boX', 'postgres')
+    print('Updating finished')
+    log.info('Updating finished')
 
 
 if __name__ == '__main__':
-    user = input('User (default: postgres): ')  # вход на сервер
-    password = getpass.getpass('Password: ')
-
-    con, meta = connect(user, password, 'taxpayers')
-    print(con)
-    print(meta)
-    input()
+    if not os.path.exists('data/'):  # если нету папки data
+        os.makedirs('data/')
+    print('Напишите комманду help для вызова справки')
+    command = ''
+    while command != 'exit':
+        command = input('>>> ')  # like python.exe
+        if command == 'download':  # скачать .xlsx файлы
+            file_methods.download()
+        elif command == 'help':  # справка
+            help()
+        elif command == 'convert':  # .xlsx
+            file_methods.xlsx_to_csv()
+        elif command == 'prepare':
+            file_methods.prepare_csv()
+        elif command == 'delete files':
+            file_methods.delete_files('data/csv/')
+            file_methods.delete_files('data/xlsx/')
+            file_methods.delete_files('data/csv_edited/')
+        elif command == 'delete tables':
+            db_methods.delete_tables('postgres', 'beat7boX', 'postgres')  # палево с паролем
+        elif command == 'create':
+            db_methods.create('postgres', 'beat7boX', 'postgres')
+        elif command == 'update':  # обновить вручную
+            main_method()
+        elif command == 'exit':
+            break
+        elif command == '':
+            continue
+        else:
+            print('Invalid command. Use command \'help\' to get help')

@@ -1,0 +1,36 @@
+Time - 2018-06-21 13:51:18,790: ERROR - 'dict' object does not support indexing
+Time - 2018-06-21 13:52:01,885: INFO - Tables are deleted
+Time - 2018-06-21 14:01:14,789: INFO - Tables are deleted
+Time - 2018-06-21 14:04:49,249: INFO - Updating started
+Time - 2018-06-21 14:04:49,431: INFO - Files in data/csv/ are deleted
+Time - 2018-06-21 14:04:49,449: INFO - Files in data/xlsx/ are deleted
+Time - 2018-06-21 14:04:49,494: INFO - Files in data/csv_edited/ are deleted
+Time - 2018-06-21 14:06:23,464: INFO - Files are downloaded from server
+Time - 2018-06-21 14:07:34,912: INFO - XLSX files are converted to CSV format
+Time - 2018-06-21 14:07:46,313: INFO - CSV files are prepared for inserting into db tables
+Time - 2018-06-21 14:07:47,565: INFO - Tables are deleted
+Time - 2018-06-21 14:07:48,645: INFO - Data inserted into database tables
+Time - 2018-06-21 14:07:48,646: INFO - Updating finished
+Time - 2018-06-21 14:10:38,103: INFO - Data inserted into database tables
+Time - 2018-06-21 14:11:46,269: INFO - Data inserted into database tables
+Time - 2018-06-21 14:12:34,549: INFO - Tables are deleted
+Time - 2018-06-21 14:12:44,295: INFO - Data inserted into database tables
+Time - 2018-06-21 14:16:00,463: ERROR - [WinError 3] ??????? ?? ??????? ????? ????????? ????: 'data/csv_edited/'
+Time - 2018-06-21 14:23:27,506: INFO - Data inserted into database tables
+Time - 2018-06-21 14:23:59,901: INFO - Tables are deleted
+Time - 2018-06-21 14:49:00,428: INFO - CSV files are prepared for inserting into db tables
+Time - 2018-06-21 14:49:08,736: ERROR - (psycopg2.ProgrammingError) ОШИБКА:  ошибка синтаксиса (примерное положение: "TABLE")
+LINE 1: COPY "INACTIVE" TABLE ("id","ИИН/БИН","РНН","Наименование на...
+                        ^
+ [SQL: 'COPY "INACTIVE" TABLE ("id","ИИН/БИН","РНН","Наименование налогоплательщика","ФИО налогоплательщика","ФИО руководителя","ИИН руководителя","РНН руководителя","Номер приказа","Дата приказа")FROM C:/Users/5kif4a_/PycharmProjects/taxpayers/src/data/csv_editedlist_INACTIVE_KZ_ALL_edited.csvDELIMITER \',\' CSV ENCODING \'UTF8\''] (Background on this error at: http://sqlalche.me/e/f405)
+Time - 2018-06-21 14:49:50,828: ERROR - (psycopg2.ProgrammingError) ОШИБКА:  ошибка синтаксиса (примерное положение: "C")
+LINE 1: ...ля","Номер решения суда","Дата решения суда")FROM C:/Users/5...
+                                                             ^
+ [SQL: 'COPY "INVALID_REGISTRATION" ("id","ИИН/БИН","РНН","Наименование налогоплательщика","ФИО налогоплательщика","ФИО руководителя","ИИН руководителя","РНН руководителя","Номер решения суда","Дата решения суда")FROM C:/Users/5kif4a_/PycharmProjects/taxpayers/src/data/csv_editedlist_INVALID_REGISTRATION_KZ_ALL_edited.csvDELIMITER \',\' CSV ENCODING \'UTF8\''] (Background on this error at: http://sqlalche.me/e/f405)
+Time - 2018-06-21 14:50:09,647: ERROR - (psycopg2.OperationalError) ОШИБКА:  не удалось открыть файл "C:/Users/5kif4a_/PycharmProjects/taxpayers/src/data/csv_editedlist_INVALID_REGISTRATION_KZ_ALL_edited.csv" для чтения: No such file or directory
+HINT:  COPY FROM указывает серверному процессу PostgreSQL прочитать данные из файла. Возможно, на самом деле вам нужно клиентское средство, например, \copy в psql.
+ [SQL: 'COPY "INVALID_REGISTRATION" ("id","ИИН/БИН","РНН","Наименование налогоплательщика","ФИО налогоплательщика","ФИО руководителя","ИИН руководителя","РНН руководителя","Номер решения суда","Дата решения суда")FROM \'C:/Users/5kif4a_/PycharmProjects/taxpayers/src/data/csv_editedlist_INVALID_REGISTRATION_KZ_ALL_edited.csv\' DELIMITER \',\' CSV ENCODING \'UTF8\''] (Background on this error at: http://sqlalche.me/e/e3q8)
+Time - 2018-06-21 14:50:37,055: INFO - Data inserted into database tables
+Time - 2018-06-21 14:51:26,097: INFO - Data inserted into database tables
+Time - 2018-06-21 14:54:24,309: INFO - Data inserted into database tables
+Time - 2018-06-21 15:08:05,065: INFO - Data inserted into database tables
