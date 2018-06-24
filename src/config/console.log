@@ -34,3 +34,43 @@ Time - 2018-06-21 14:50:37,055: INFO - Data inserted into database tables
 Time - 2018-06-21 14:51:26,097: INFO - Data inserted into database tables
 Time - 2018-06-21 14:54:24,309: INFO - Data inserted into database tables
 Time - 2018-06-21 15:08:05,065: INFO - Data inserted into database tables
+Time - 2018-06-24 12:37:46,820: INFO - CSV files are prepared for inserting into db tables
+Time - 2018-06-24 12:38:38,508: INFO - CSV files are prepared for inserting into db tables
+Time - 2018-06-24 12:40:27,784: INFO - CSV files are prepared for inserting into db tables
+Time - 2018-06-24 12:48:27,880: INFO - Data inserted into database tables
+Time - 2018-06-24 12:51:54,579: INFO - Tables are deleted
+Time - 2018-06-24 12:52:56,012: INFO - Data inserted into database tables
+Time - 2018-06-24 13:35:06,268: INFO - Tables are deleted
+Time - 2018-06-24 13:36:48,779: INFO - Tables are deleted
+Time - 2018-06-24 13:37:45,881: INFO - Data inserted into database tables
+Time - 2018-06-24 13:42:36,562: ERROR - local variable 'cols' referenced before assignment
+Time - 2018-06-24 13:42:52,662: ERROR - The type of ФИО налогоплательщика is not a SQLAlchemy type 
+Time - 2018-06-24 13:44:20,787: ERROR - The type of РНН руководителя is not a SQLAlchemy type 
+Time - 2018-06-24 13:44:40,350: ERROR - The type of integer is not a SQLAlchemy type 
+Time - 2018-06-24 13:47:49,495: INFO - Data inserted into database tables
+Time - 2018-06-24 13:48:24,888: INFO - Data inserted into database tables
+Time - 2018-06-24 13:48:58,276: INFO - Data inserted into database tables
+Time - 2018-06-24 13:49:23,881: INFO - Data inserted into database tables
+Time - 2018-06-24 15:13:32,368: INFO - Data inserted into database tables
+Time - 2018-06-24 15:14:27,102: ERROR - dictionary changed size during iteration
+Time - 2018-06-24 15:15:32,753: ERROR - dictionary changed size during iteration
+Time - 2018-06-24 15:16:29,969: ERROR - dictionary changed size during iteration
+Time - 2018-06-24 15:16:50,231: ERROR - dictionary changed size during iteration
+Time - 2018-06-24 15:23:57,376: INFO - Data inserted into database tables
+Time - 2018-06-24 15:25:23,403: INFO - Tables are deleted
+Time - 2018-06-24 15:28:08,077: INFO - Data inserted into database tables
+Time - 2018-06-24 15:28:35,541: INFO - Tables are deleted
+Time - 2018-06-24 15:29:48,545: INFO - Tables are deleted
+Time - 2018-06-24 15:37:44,191: INFO - Data inserted into database tables
+Time - 2018-06-24 15:37:52,171: INFO - Tables are deleted
+Time - 2018-06-24 15:37:56,013: INFO - Data inserted into database tables
+Time - 2018-06-24 15:39:36,861: INFO - Updating started
+Time - 2018-06-24 15:39:37,027: INFO - Files in data/csv/ are deleted
+Time - 2018-06-24 15:39:37,141: INFO - Files in data/xlsx/ are deleted
+Time - 2018-06-24 15:39:37,336: INFO - Files in data/csv_edited/ are deleted
+Time - 2018-06-24 15:39:59,429: INFO - Files are downloaded from server
+Time - 2018-06-24 15:41:14,394: INFO - XLSX files are converted to CSV format
+Time - 2018-06-24 15:41:24,811: INFO - CSV files are prepared for inserting into db tables
+Time - 2018-06-24 15:41:25,009: INFO - Tables are deleted
+Time - 2018-06-24 15:42:45,367: INFO - Data inserted into database tables
+Time - 2018-06-24 15:42:45,645: INFO - Updating finished

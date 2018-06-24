@@ -1,5 +1,6 @@
 import os
 import time
+import datetime
 import file_methods
 import db_methods
 import log
@@ -7,9 +8,13 @@ import log
 
 def help():
     print('''Список комманд:
-    download - скачать .xlsx файлы с сервера
-    convert - конвертировать .xlsx файлы в .csv
-    delete xlsx - удалить все файлы
+    create - создать таблицы в базе данных и внести информацию из CSV файлов в таблицы базы данных
+    convert - конвертировать XLSX файлы в .csv
+    prepare - подготовить CSV для импортирования в базу данных 
+    delete files - удалить все XLSX и CSV файлы
+    delete tables - удалить таблицы в базе данных
+    download - скачать XLSX файлы с сервера
+    update - обновление базы данных
     exit - закрыть программу''')
 
 
@@ -39,7 +44,7 @@ if __name__ == '__main__':
             file_methods.download()
         elif command == 'help':  # справка
             help()
-        elif command == 'convert':  # .xlsx
+        elif command == 'convert':
             file_methods.xlsx_to_csv()
         elif command == 'prepare':
             file_methods.prepare_csv()

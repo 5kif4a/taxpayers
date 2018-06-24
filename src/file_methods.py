@@ -117,7 +117,7 @@ def prepare_csv():  # слишком большой метод, криворук
 def delete_files(path):  # удалить файлы
     files = os.listdir(path)
     if len(files) > 0:
-        print('Deleting files')
+        print('Deleting files in ' + path)
         for file in files:
             print('Deleting ' + file)
             os.remove(path + file)

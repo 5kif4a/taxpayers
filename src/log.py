@@ -1,5 +1,7 @@
 import logging
 
+# UnicodeErrors :)
+
 
 def info(message):
     logging.basicConfig(filename='config/console.log', level=logging.INFO,
